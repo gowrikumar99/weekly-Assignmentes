@@ -1,0 +1,947 @@
+  assignmentes upto now
+
+//polindrome in string
+import java.util.Scanner;
+ class Palindrome{
+   public static void main(String args[]){
+      Scanner input= new Scanner(System.in);
+      String str="mom";      //original string
+      String rev = "";       //storage string
+      str = input.nextLine();
+      int length = str.length();
+      for ( int i = length - 1; i >= 0; i-- ){
+        rev = rev + str.charAt(i);
+        if (str.equals(rev)){
+         System.out.println(str+" is a palindrome");
+        }
+        else{System.out.println(str+" is not a palindrome");
+        }
+      }
+      System.out.println("Enter a string:");
+   }
+}
+
+
+//reverced string 
+import java.util.Scanner;
+class Reverse   
+{    
+    public static void main(String[] args) {
+      Scanner input=new Scanner(System.in);
+      String string = "GOWRIKUMAR";
+      String reversedStr = "";     //Stores the reverse of given string   
+            for(int i = string.length()-1; i >= 0; i--){    // the string from last and add each character to reversedStr   
+            reversedStr = reversedStr + string.charAt(i);    
+        }    
+        System.out.println("Original string: " + string); //original string display 
+        System.out.println("Reverse of given string: " + reversedStr);  //Displays the reverse of given string   
+    }    
+}    
+
+import java.util.Scanner;
+class AddTwoMatrix{
+  public static void main(String[] args){
+    int a[][]=new int[2][2];
+    int b[][]=new int[2][2];
+    int c[][]=new int[2][2];
+    Scanner input=new Scanner(System.in);
+    System.out.println("Enter first matrix data");
+    for(int i=0;i<2;i++){
+      for(int j=0;j<2;j++){
+        a[i][j]=input.nextInt();
+      }
+    }
+    System.out.println("Enter first matrix data");
+    for(int i=0;i<2;i++){
+      for(int j=0;j<2;j++){
+        b[i][j]=input.nextInt();
+      }
+    }
+    System.out.println("first matrix \n");
+     for(int i=0;i<2;i++){
+      for(int j=0;j<2;j++){
+        System.out.println(a[i][j]+"");
+      }
+       System.out.println("\n");
+    }
+     System.out.println("second matrix \n");
+     for(int i=0;i<2;i++){
+      for(int j=0;j<2;j++){
+        System.out.println(b[i][j]+"");
+      }
+       System.out.println("\n");
+    }
+     System.out.println("Sum of two matrix \n");
+     for(int i=0;i<2;i++){
+      for(int j=0;j<2;j++){
+        c[i][j]=a[i][j]+b[i][j];
+        System.out.println(c[i][j]+"");
+      }
+       System.out.println("\n");
+    }
+  }
+}
+
+import java.util.Scanner;
+class ColumnAndRowSum{
+  public static void main(String[] args){
+    Scanner input=new Scanner(System.in);
+      int a[][]={{1,5,8,6},{7,2,5,4},{3,6,9,2},{5,7,4,3}};
+      //print the matrix
+      for(int i=0;i<4;i++){
+      for(int j=0;j<4;j++){
+        System.out.println(a[i][j]+"");
+      }
+         System.out.println();
+      }
+     System.out.println();
+    //sum of row elementes
+     for(int i=0;i<4;i++){
+       int sum=0;
+      for(int j=0;j<4;j++){
+        sum=sum+a[i][j];
+      }
+         System.out.println("sum of "+(i+1)+"is : "+sum);
+      }
+     System.out.println();
+    //sum of column elementes
+     for(int i=0;i<4;i++){
+       int sum=0;
+      for(int j=0;j<4;j++){
+        sum=sum+a[j][i];
+      }
+         System.out.println("sum of column"+(i+1)+"is :"+sum);
+      }
+    }
+  }
+
+
+//mutlplication matrix:
+import java.util.Scanner;
+class Multipilcation
+  {
+    public static void main(String []args)
+    {
+      int a[][]=new int[2][2];
+      int b[][]=new int[2][2];
+      int c[][]=new int[2][2];
+      Scanner sc=new Scanner(System.in);
+      System.out.println("enter first array elements:");
+      for(int i=0;i<2;i++)
+        {
+          for(int j=0;j<2;j++)
+            {
+              a[i][j]=sc.nextInt();
+            }
+        }
+      System.out.println("enter the second array elements:");
+      for(int i=0;i<2;i++)
+        {
+          for(int j=0;j<2;j++)
+            {
+              b[i][j]=sc.nextInt();
+            }
+        }
+      System.out.println("multipilcation matrix:");
+      for(int i=0;i<2;i++)
+        {
+          for(int j=0;j<2;j++)
+            {
+              c[i][j]=a[i][j]*b[i][j];
+              System.out.print(c[i][j]+" ");
+            }
+          System.out.println();
+        }
+    }
+  }
+
+import java.util.Scanner;
+class MaximumNumber{
+  public static void main(String[] args){
+    int a[]=new int[5];int max;
+    Scanner input =new Scanner(System.in);
+    System.out.println("Enter the array element");
+    for(int i=0;i<5;i++){
+      a[i]=input.nextInt();
+    }
+    max=a[0];
+    for(int i=0;i<5;i++){
+      if(a[i]>max){
+        max=a[i];
+      }
+    }
+    System.out.println("maximum element : "+max);
+  }
+}
+
+import java.util.Scanner;
+class PrimeNumberArray
+  {
+    public static void main(String args[])
+    {
+     Scanner sc=new Scanner(System.in);
+      int a[]={1,2,3,4,5,6,7,8,9,10};
+       for(int i=0;i<a.length;i++)
+        {
+         int count=0;
+          for(int j=1;j<=a[i];j++)
+            {
+             if(a[i]%j==0)
+             {
+               count++;
+             }
+            }
+        
+      if(count==2)
+      {
+        System.out.println(a[i]);
+      }
+     }
+   }
+}
+
+//  search an element is present in array or not
+ import java.util.Scanner;
+class SearchElament
+  {
+    public static void searchElement(int a[],int key)
+    {
+      int i;
+      int count=0;
+      for(i=0;i<a.length;i++)
+        {
+          if(a[i]==key)
+          {
+            count++;
+            break;
+          }
+        }
+      if(count>0)
+      {
+        System.out.println("element is found at "+i+ "th index");
+      }
+           else
+            System.out.println("element is not found");
+    }
+    public static void main(String args[])
+    {
+      Scanner sc=new Scanner(System.in);
+      int a[]={34,78,90,12,34,56};
+      System.out.println("enter the key value to search");
+      int key=sc.nextInt();
+      searchElement(a,key);
+    }
+  }
+
+
+import java.util.Scanner;
+class Transpose{
+  public static void main(String[] args){
+     int a[][]=new int [2][2];
+    Scanner input= new Scanner(System.in);
+    System.out.println("Enter array Data");
+    for(int i=0;i<=1;i++){
+      for(int j=0;j<=1;j++){
+        a[i][j]=input.nextInt();
+      }
+    }
+  System.out.println(" array matrix");
+    for(int i=0;i<=1;i++){
+      for(int j=0;j<=1;j++){
+        System.out.println(a[i][j]);
+      }
+    }
+    System.out.println();
+    System.out.println("Transpose matrix");
+    for(int i=0;i<=1;i++){
+      for(int j=0;j<=1;j++){
+        System.out.println(a[j][i]);
+      }
+    }
+    System.out.println();
+  }
+}
+
+import java.util.Scanner;
+class Addtwomatrix{
+  public static void main(String[] args){
+    int a[][]=new int[2][2];
+    int b[][]=new int[2][2];
+    int c[][]=new int[2][2];
+    Scanner input=new Scanner(System.in);
+    System.out.println("Enter first matrix data");
+    for(int i=0;i<2;i++){
+      for(int j=0;j<2;j++){
+        a[i][j]=input.nextInt();
+      }
+    }
+    System.out.println("Enter first matrix data");
+    for(int i=0;i<2;i++){
+      for(int j=0;j<2;j++){
+        b[i][j]=input.nextInt();
+      }
+    }
+     System.out.println("Sum of two matrix :");
+     for(int i=0;i<2;i++){
+      for(int j=0;j<2;j++){
+        c[i][j]=a[i][j]+b[i][j];
+        System.out.println(c[i][j]);
+      }
+    }
+    System.out.println();
+  }
+}
+
+import java.util.Scanner;
+class CharAtFor{
+  public static void main(String[] args){
+    String str="hello";
+    for(int i=0;i<str.length();i++){
+      System.out.println(str.charAt(i));
+    }
+  }
+}
+
+
+//charAt()
+import java.util.Scanner;
+class Sample
+  {
+    public static void main(String args[])
+    {
+      String str="hello world";
+      char ch=str.charAt(3);
+      System.out.println("character is "+ch);
+        
+    }
+  }
+
+//two dimensional array
+mport java.util.Scanner;
+class Sample
+  {
+    public static void main(String args[])
+    {
+      Scanner sc=new Scanner(System.in);
+      System.out.println("enter the row size");
+      int row=sc.nextInt();
+      System.out.println("enter the coloumn size");
+      int coloumn=sc.nextInt();
+      int arr[][]=new int[row][coloumn];
+      System.out.println("enter the elements");
+      for(int i=0;i<row;i++)
+        {
+          for(int j=0;j<coloumn;j++)
+            {
+              arr[i][j]=sc.nextInt();
+            }
+        }
+      System.out.println("the elements are");
+      for(int i=0;i<row;i++)
+        {
+          for(int j=0;j<coloumn;j++)
+            {
+              System.out.print(arr[i][j]+" ");
+            }
+          System.out.println();
+        }
+     
+               
+    }
+  }
+
+import java.util.Scanner;
+class Transpose{
+  public static void main(String[] args){
+     int a[][]=new int [2][2];
+    Scanner input= new Scanner(System.in);
+    System.out.println("Enter array Data");
+    for(int i=0;i<=1;i++){
+      for(int j=0;j<=1;j++){
+        a[i][j]=input.nextInt();
+      }
+    }
+  System.out.println(" array matrix");
+    for(int i=0;i<=1;i++){
+      for(int j=0;j<=1;j++){
+        System.out.println(a[i][j]);
+      }
+    }
+    System.out.println();
+    System.out.println("Transpose matrix");
+    for(int i=0;i<=1;i++){
+      for(int j=0;j<=1;j++){
+        System.out.println(a[j][i]);
+      }
+    }
+    System.out.println();
+  }
+}
+
+import java.util.Scanner;
+class StringLength{
+  public static void main(String[] args){
+    Scanner sc=new Scanner (System.in);
+    String str="gowrikumar";
+    System.out.println(str.length());
+  }
+}
+
+//  check an element is present in array or not
+ import java.util.Scanner;
+class Search
+  {
+    public static void searchElement(int a[],int key)
+    {
+      int i;
+      int count=0;
+      for(i=0;i<a.length;i++)
+        {
+          if(a[i]==key)
+          {
+            count++;
+            break;
+          }
+        }
+      if(count>0)
+      {
+        System.out.println("element is found at "+i+ "th index");
+      }
+           else
+            System.out.println("element is not found");
+    }
+    public static void main(String args[])
+    {
+      Scanner sc=new Scanner(System.in);
+      int a[]={34,78,90,12,34,56};
+      System.out.println("enter the key value to search");
+      int key=sc.nextInt();
+      searchElement(a,key);
+    }
+  }
+
+import java.util.Scanner;
+class PrimeNumberArray
+  {
+    public static void prime(int number)
+    {
+      int total=0;
+     Scanner sc=new Scanner(System.in);
+       for(int i=0;i<=number;i++)
+        {
+         int count=0;
+          for(int j=1;j<=i;j++)
+            {
+             if(i%j==0)
+             {
+               count++;
+             }
+            }
+        
+      if(count==2)
+      {
+        System.out.println(i);
+      }
+       }
+   }
+          
+            
+    }
+
+//Write a program that takes an array of integers as input and calculates the sum of all the elements in the array.
+import java.util.Scanner;
+class ArraySum{
+    public static void sum(int a[],int size)
+    {
+      int sum=0;
+      for (int i=1;i<size;i++)
+        {
+          sum=sum+a[i];         
+        }
+      System.out.println("the sum of arraay is "+sum);
+    }
+    public static void main(String args[])
+    {
+      Scanner input=new Scanner(System.in);
+      System.out.println("enter size of the array");
+      int size=input.nextInt();
+      int a[]=new int[size];
+      System.out.println("enter array elements");
+      for(int i=0;i<size;i++)
+        {
+          a[i]=input.nextInt();
+        }
+      sum(a,size);
+    }
+  }
+
+ //Array Average: Create a program that prompts the user to enter an array of numbers and then calculates the average of all the elements in the array.
+import java.util.Scanner;
+class AverageOfArray
+  {
+    public static void average(int a[],int size)
+    {
+      int sum=0,average=0;
+      for(int i=0;i<size;i++)
+        {
+          sum=sum+a[i];
+          average=sum/size;
+        }
+      System.out.println("the average array is "+average);
+    }   
+    public static void main(String args[])
+    {
+      Scanner input=new Scanner(System.in);
+      System.out.println("enter size of the array");
+      int size=input.nextInt();
+      int a[]=new int[size];
+      System.out.println("enter array elements");
+      for(int i=0;i<size;i++)
+        {
+          a[i]=input.nextInt();
+        }
+      average(a,size);
+    }
+  }
+
+
+//deleting element from array;
+class DeleteElement{
+  public static void main(String[] args){
+    int a[]={10,20,30,40,50};
+    int delete=40;
+    int count=0;
+    for(int i=0;i<a.length;i++){
+      if(delete==a[i]){
+        for(int j=i;j<a.length;j++){
+          a[j]=a[j+1];
+        }
+        count=count+1;
+        break;
+      }
+    }
+    if(count==0){
+      System.out.println("element not founded");
+    }else{
+      System.out.println("element deleted successfully");
+    }
+    for(int i=0;i<a.length-1;i++){
+      System.out.println(a[i]+"");
+    }
+  }
+}
+
+
+class Freqence
+  {
+    public static void main(String args[])
+    {
+      int a[]={2,3,2,1,3,4,3,5};
+      int size=a.length;
+      boolean b[]=new boolean[size];
+      for(int k=0;k<size;k++)
+        {
+          b[k]=false;
+        }
+    System.out.println("Element -----------Frequency");
+      for(int i=0;i<a.length;i++)
+        {
+          int count=1;
+          if(b[i]==true)
+            continue;
+          for(int j=i+1;j<a.length;j++)
+            {
+              if(a[i]==a[j])
+              {
+                count++;
+                b[j]=true;
+              }
+            }
+          System.out.println(a[i]);
+        }
+    }
+  }
+
+import java.util.Scanner;
+class InsertElement
+  {
+    public static void main(String args[])
+    {
+      Scanner input=new Scanner(System.in);
+      int a[]={1,2,5,4,3};
+      int b[]=new int[a.length+1];
+      System.out.println("enter the value to insert");
+      int value=input.nextInt();
+      System.out.println("enter the index position ");
+      int pos=input.nextInt();
+      for(int i=0;i<b.length;i++)
+        {
+          if(i==pos)
+          {
+            b[i]=value;
+          }
+          else if(i>pos)
+          {
+            b[i]=a[i-1];
+          }
+          else 
+          {
+            b[i]=a[i];
+          }
+            
+        }
+      System.out.println("the array elements are");
+      for(int i=0;i<b.length;i++)
+        System.out.print(b[i]+" ");
+      
+    }
+  }
+
+import java.util.Scanner;
+class PrintArraRev
+  {
+    public static void main(String args[])
+    {
+      Scanner input=new Scanner(System.in);
+      System.out.println("Enter the size");
+       int size= input.nextInt();
+      int a[]=new int[size];
+      for(int i=0;i<a.length;i++)
+        {
+          a[i]=input.nextInt();
+        }
+      for(int i=a.length-1;i>=0;i--)
+        {
+         System.out.println( "Reverse is :"+(a[i]));
+        }
+    }
+  }
+
+//Array Sorting: Implement a sorting algorithm (e.g., bubble sort, insertion sort) to arrange the elements of an array in ascending or descending order.
+import java.util.Scanner;
+class SortArray
+  {
+    public static void sortArray(int a[],int size)
+    {
+      int i,j,temp=0;
+      for(i=0;i<size;i++)
+        {
+          for(j=i+1;j<size;j++)
+            {
+              if(a[j]<a[i])
+              {
+                temp=a[i];
+                a[i]=a[j];
+                a[j]=temp;
+              }
+            }
+        }
+      System.out.println("after sorting the elements");
+      for(i=0;i<size;i++)
+        {
+          System.out.print(a[i]+" ");
+        }
+    }
+    public static void main(String args[])
+    {
+      Scanner input=new Scanner(System.in);
+      System.out.println("enter the size of  array");
+      int size=input.nextInt();
+      int a[]=new int[size];
+      System.out.println("enter array elements");
+      for(int i=0;i<size;i++)
+        {
+          a[i]=input.nextInt();
+        }
+      sortArray(a,size);
+    }
+  }
+
+class uniqueNumber
+  {
+    public static void main(String args[])
+    {
+      int a[]={2,3,2,1,3,4,3,5};
+      int size=a.length;
+      boolean b[]=new boolean[size];
+      for(int k=0;k<size;k++)
+        {
+          b[k]=false;
+        }
+    System.out.println("Element -----------Frequency");
+      for(int i=0;i<a.length;i++)
+        {
+          int count=1;
+          if(b[i]==true)
+            continue;
+          for(int j=i+1;j<a.length;j++)
+            {
+              if(a[i]==a[j])
+              {
+                count++;
+                b[j]=true;
+              }
+            }
+            if(count==1)
+          System.out.println(a[i]);
+        }
+    }
+  }
+
+
+
+
+
+
+
+
+//uppercaseandLowercaseand symblesandNumbers in string
+import java.util.Scanner;
+class CountUpperAndLowerAndSymleAndnumbers
+{
+    public static void main(String args[]){ 
+      Scanner input=new Scanner(System.in);
+        String str = "Gowrikumar99@gmail.com";
+        int upper = 0, lower = 0, number = 0, special = 0; 
+        for(int i = 0; i < str.length(); i++)
+        {
+            char ch = str.charAt(i);
+            if (ch >= 'A' && ch <= 'Z')   //all uppercase letters
+            {
+              upper=upper+1;
+            }  
+            else if (ch >= 'a' && ch <= 'z')   //all lowercase letters
+            {
+              lower=lower+1;
+            }
+            else if (ch >= '0' && ch <= '9')  //all numbers from 0-9
+            {
+               number=number+1;
+            }
+            else
+            {
+              special=special+1;      //all special characters
+            }
+        }
+ 
+        System.out.println("Lower case letters : " + lower);
+        System.out.println("Upper case letters : " + upper);
+        System.out.println("Number : " + number);
+        System.out.println("Special characters : " + special);
+    }
+}
+
+
+//vowels from string
+import java.util.Scanner;
+class V{
+  public static void main(String[] args){
+    Scanner input=new Scanner(System.in);
+    String str="gowrikumar";
+   int  vowels=0, conconentes=0;   //vowels and conconentes equals to zero
+    for(int i=0;i<str.length();i++){
+      char ch=str.charAt(i);
+    if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'||ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U'){
+       vowels=vowels+1;    //vowels increment
+      
+    }else{
+      conconentes=conconentes+1;  //conconentes increment
+    }
+    }
+    System.out.println("Enter the vowel :"+vowels);
+    System.out.println("Enter the conconent : "+conconentes);
+  }
+}
+
+
+
+//print wordes and length
+import java.util.Scanner;
+class Wordes{
+  public static void main(String[] args){
+    Scanner input=new Scanner(System.in);
+    String str="Gowrikumar";     //input string name
+    int count=0;
+    for(int i=0;i<str.length();i++){
+      count=count+1;
+    }
+    System.out.println(count);
+  }
+}
+
+
+//toCharArray()
+import java.util.Scanner;
+class Sample
+  {
+    public static void main(String args[])
+    {
+     String s="bitlabs";
+      char ch[]=s.toCharArray();
+      for(int i=0;i<ch.length;i++)
+        {
+          System.out.println(ch[i]+" ");
+        }
+      
+ 
+    }
+  }
+
+
+//Contains()
+import java.util.Scanner;
+class Sample
+  {
+    public static void main(String args[])
+    {
+      String s1="universe";
+      String s2="welcome HelloWorld";
+      boolean value=s1.contains("e");
+      System.out.println(value);
+     System.out.println(s2.contains("come"));
+      System.out.println(s2.contains("ains"));
+      System.out.println(s2.contains("llo"));
+    }
+  }
+
+import java.util.Scanner;
+class Empty{
+  public static void main(String[] args){
+    Scanner input=new Scanner(System.in);
+    String str="";
+    String str1="gowrikumar";
+    System.out.println(str.isEmpty());
+     System.out.println(str1.isEmpty());
+  }
+}
+
+
+import java.util.Scanner;
+class Equals{
+  public static void main(String[] args){
+    String s1="gowrikumar";
+    String s2="gowrikumar";
+    String s3="JAVA DEVELOPER";
+    String s4="FULLSTACK";
+    System.out.println(s1.equals(s2));
+    System.out.println(s1.equals(s3));
+    System.out.println(s1.equals(s4));
+  }
+}
+
+
+//difference between equals() and ==
+import java.util.Scanner;
+class Sample
+  {
+    public static void main(String args[])
+    {
+    String str="hello";
+    String str1="hello";
+    String str2="hai";
+      String str6="hai";
+      String str3=new String("hello");
+      String str4=new String("hai");
+      String str5=new String("hello");
+  /*    System.out.println(str.equals(str1));//true
+      System.out.println(str.equals(str2));//false
+      System.out.println(str.equals(str3));//true
+       System.out.println(str2.equals(str4));//true  */
+      System.out.println(str==str1); //true
+       System.out.println(str==str3); //false
+      System.out.println(str2==str4); //false 
+         System.out.println(str2==str6); //true
+ 
+    }
+  }
+
+
+//indexOf()
+import java.util.Scanner;
+class Sample
+  {
+    public static void main(String args[])
+    {
+      String s="welcome toe bitlabs come";
+      System.out.println(s.indexOf("come",7));
+ 
+    }
+  }
+
+
+
+//join()
+import java.util.Scanner;
+class Sample
+  {
+    public static void main(String args[])
+    {
+      String str=String.join("-","18","05","2023");
+      System.out.println(str);
+       String str1=String.join("@","abc","bc","bca");
+      System.out.println(str1);
+ 
+    }
+  }
+
+
+import java.util.Scanner;
+class Length{
+  public static void main(String[] args){
+    String str="universe";
+    String str1="HelloWorld";
+    String str2=str.concat(str1);
+  
+    System.out.println(str.length());
+    System.out.println(str2);
+    System.out.println("str>str1 "+str.compareTo(str1));
+  }
+}
+
+
+class Replace
+  {
+    public static void main(String args[])
+    {
+      String s1="gowri";
+      String s2=s1.replace('o','g');
+      System.out.println(s2);
+    }
+  }
+
+//reverced string 
+import java.util.Scanner;
+class Reverse   
+{    
+    public static void main(String[] args) {
+      Scanner input=new Scanner(System.in);
+      String string = "GOWRIKUMAR";
+      String reversedStr = "";     //Stores the reverse of given string   
+            for(int i = string.length()-1; i >= 0; i--){    // the string from last and add each character to reversedStr   
+            reversedStr = reversedStr + string.charAt(i);    
+        }    
+        System.out.println("Original string: " + string); //original string display 
+        System.out.println("Reverse of given string: " + reversedStr);  //Displays the reverse of given string   
+    }    
+}    
+
+
+import java.util.Scanner;
+class Starting{
+  public static void main(String[] args){
+    Scanner input=new Scanner(System.in);
+    String str="Universe";
+    System.out.println(str.startsWith("U"));
+  }
+}
+
+
+import java.util.Scanner;
+class StringEndsWith{
+  public static void main(String[] args){
+    Scanner input=new Scanner(System.in);
+    String str="HelloWorld";
+    System.out.println(str.endsWith("0"));
+  }
+}
+
